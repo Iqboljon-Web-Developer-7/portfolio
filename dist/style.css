@@ -55,7 +55,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(./images/bg.png);
+  background: url(../images/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -348,18 +348,24 @@ section {
 }
 .work .content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
 .work .content .card {
-  width: 340px;
+  width: 100%;
   margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: rgba(255, 255, 255, 0.944);
 }
 .work .content .card .card-img {
   position: relative;
-  width: 100%;
+  width: 400px;
+  flex-shrink: 0;
   height: 260px;
   border-radius: 10px;
   overflow: hidden;
@@ -378,6 +384,19 @@ section {
 .work .content .card .card-img img:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+.work .content .card .card-info {
+  display: grid;
+  gap: 1rem;
+}
+.work .content .card .card-info h2 {
+  color: rgb(206, 231, 241);
+}
+.work .content .card .card-info p {
+  color: rgb(183, 229, 248);
+}
+.work .content .card .card-info h3 {
+  color: skyblue;
 }
 .work .main-btn {
   color: #fff;

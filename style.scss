@@ -57,7 +57,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(./images/bg.png);
+  background: url(../images/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -361,16 +361,22 @@ section {
   background: #000016;
   .content {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-top: 20px;
     .card {
-      width: 340px;
+      width: 100%;
       margin: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      color: rgba(255, 255, 255, 0.944);
       .card-img {
         position: relative;
-        width: 100%;
+        width: 400px;
+        flex-shrink: 0;
         height: 260px;
         border-radius: 10px;
         overflow: hidden;
@@ -388,6 +394,19 @@ section {
             transform: scale(1.2);
             cursor: pointer;
           }
+        }
+      }
+      .card-info {
+        display: grid;
+        gap: 1rem;
+        h2 {
+          color: rgb(206, 231, 241);
+        }
+        p {
+          color: rgb(183, 229, 248);
+        }
+        h3 {
+          color: skyblue;
         }
       }
     }
